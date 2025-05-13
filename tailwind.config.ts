@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -27,15 +26,15 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: '#e5e7eb',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: '#111827',
 				},
 				secondary: {
 					DEFAULT: '#e3f2fd',
-					foreground: 'hsl(var(--secondary-foreground))'
+					foreground: '#1e293b',
 				},
 				tertiary: {
 					DEFAULT: '#f59e0b',
-					foreground: '#ffffff'
+					foreground: '#ffffff',
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
@@ -105,7 +104,7 @@ export default {
 				'fade-in': 'fade-in 0.8s ease-out'
 			},
 			backgroundImage: {
-				'gradient-custom': 'linear-gradient(to bottom right, #e5e7eb, #e3f2fd)',
+				'gradient-custom': 'linear-gradient(135deg, #e3f2fd 0%, #e5e7eb 100%)',
 			}
 		}
 	},
