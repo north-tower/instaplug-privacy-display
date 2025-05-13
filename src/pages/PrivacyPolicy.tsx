@@ -1,34 +1,37 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Shield, Mail, MapPin } from "lucide-react";
+import { ArrowLeft, Shield, Mail, MapPin, Twitter, Linkedin, Github } from "lucide-react";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-      <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8 max-w-4xl">
-        <Card className="bg-white/90 backdrop-blur-sm shadow-xl border-gray-100 overflow-hidden">
-          <div className="p-6 md:p-8">
+    <div className="relative min-h-screen flex flex-col items-center justify-center bg-primary">
+      {/* Abstract SVG Background */}
+      <svg className="absolute inset-0 w-full h-full z-0" viewBox="0 0 1440 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#e3f2fd" fillOpacity="0.7" d="M0,160L60,154.7C120,149,240,139,360,154.7C480,171,600,213,720,229.3C840,245,960,235,1080,218.7C1200,203,1320,181,1380,170.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z" />
+        <circle cx="1200" cy="100" r="120" fill="#f59e0b" fillOpacity="0.15" />
+        <circle cx="200" cy="500" r="80" fill="#f59e0b" fillOpacity="0.10" />
+      </svg>
+      <div className="relative z-10 container mx-auto py-16 px-4 sm:px-6 lg:px-8 max-w-4xl">
+        <Card className="bg-white/90 shadow-2xl border-0 rounded-3xl overflow-hidden">
+          <div className="p-8 md:p-12">
             <Link 
               to="/" 
-              className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+              className="mb-8 inline-flex items-center gap-2 text-base font-medium text-tertiary hover:text-tertiary/80 transition-colors"
             >
-              <ArrowLeft className="size-4" /> Back to Home
+              <ArrowLeft className="size-5" /> Back to Home
             </Link>
-            
             <CardHeader className="text-center space-y-2 px-0 pt-4 pb-8">
               <div className="flex justify-center mb-4">
-                <div className="size-16 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Shield className="size-8 text-primary" />
+                <div className="size-16 rounded-full bg-tertiary flex items-center justify-center shadow-lg">
+                  <Shield className="size-8 text-white" />
                 </div>
               </div>
-              <h1 className="text-3xl font-bold text-gray-900">Privacy Policy for Instaplug</h1>
+              <h1 className="text-4xl font-extrabold text-gray-900">Privacy Policy for Instaplug</h1>
               <p className="text-gray-600">Last Updated: 12 May 2025</p>
             </CardHeader>
-
             <CardContent className="px-0">
               <div className="prose max-w-none text-gray-700">
                 <p className="mb-6">
@@ -38,7 +41,7 @@ const PrivacyPolicy = () => {
                 </p>
                 
                 <p className="mb-8">
-                  If you have any questions or concerns, please contact us at <a href="mailto:info@aerestechnologies.co.ke" className="text-primary hover:text-primary/80 transition-colors no-underline hover:underline">info@aerestechnologies.co.ke</a>.
+                  If you have any questions or concerns, please contact us at <a href="mailto:info@aerestechnologies.co.ke" className="text-tertiary hover:text-tertiary/80 transition-colors no-underline hover:underline">info@aerestechnologies.co.ke</a>.
                 </p>
 
                 <div className="space-y-10">
@@ -158,7 +161,7 @@ const PrivacyPolicy = () => {
                       <li>Withdraw your consent for optional data collection</li>
                       <li>Opt out of personalized advertising (via your device settings)</li>
                     </ul>
-                    <p className="mt-2">To exercise these rights, email us at <a href="mailto:info@aerestechnologies.co.ke" className="text-primary hover:text-primary/80 transition-colors no-underline hover:underline">info@aerestechnologies.co.ke</a>.</p>
+                    <p className="mt-2">To exercise these rights, email us at <a href="mailto:info@aerestechnologies.co.ke" className="text-tertiary hover:text-tertiary/80 transition-colors no-underline hover:underline">info@aerestechnologies.co.ke</a>.</p>
                   </section>
 
                   <section>
@@ -199,7 +202,7 @@ const PrivacyPolicy = () => {
                         <p className="font-medium text-lg">Aeres Technologies Limited</p>
                         <div className="flex items-center gap-2 mt-2">
                           <Mail className="size-4 text-gray-600" />
-                          <a href="mailto:info@aerestechnologies.co.ke" className="text-primary hover:text-primary/80 transition-colors no-underline hover:underline">
+                          <a href="mailto:info@aerestechnologies.co.ke" className="text-tertiary hover:text-tertiary/80 transition-colors no-underline hover:underline">
                             info@aerestechnologies.co.ke
                           </a>
                         </div>
@@ -220,9 +223,24 @@ const PrivacyPolicy = () => {
             </CardContent>
           </div>
         </Card>
-
-        <footer className="mt-12 text-center text-sm text-gray-500">
-          <p>© 2025 Aeres Technologies Limited. All rights reserved.</p>
+        <footer className="relative z-10 w-full p-8 mt-12 text-center bg-secondary/80 backdrop-blur-lg shadow-inner rounded-2xl">
+          <Separator className="mb-8" />
+          <div className="flex flex-col md:flex-row justify-between items-center max-w-3xl mx-auto px-4 gap-4">
+            <p className="text-gray-600 text-base">
+              © 2025 Aeres Technologies Limited. All rights reserved.
+            </p>
+            <div className="flex items-center gap-6 mb-4 md:mb-0">
+              <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-tertiary transition-colors">
+                <Twitter className="size-6" />
+              </a>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-tertiary transition-colors">
+                <Linkedin className="size-6" />
+              </a>
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-tertiary transition-colors">
+                <Github className="size-6" />
+              </a>
+            </div>
+          </div>
         </footer>
       </div>
     </div>
